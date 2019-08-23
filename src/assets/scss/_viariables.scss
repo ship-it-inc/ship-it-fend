@@ -1,6 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
 $background-color: #E5E5E5;
 $primary-color: #E39014;
-$seconday-color: #0F925B;
+$secondary-color: #0F925B;
 $text-color: #444444;
 $white-text-color: #FFFFFF;
+$app-font-family: roboto;
+$italic-font-family: 'Lobster';
 $black-color: #000000;
+
+$break-point-tablet: 768px;
+$break-point-desktop: 1024px;
+$break-point--small-phone: 453px;
+
+// Small tablets and large smartphones
+$screen-sm-min: 576px;
+
+// Small tablets 
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;

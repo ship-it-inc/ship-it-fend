@@ -1,0 +1,156 @@
+@import '../../assets/scss/viariables';
+@import '../../assets/scss/mixins';
+
+body{
+    background: #E5E5E5;
+    font-family: roboto;
+}
+
+.main-container {
+    display: flex;
+    height: 100%;
+    margin: 0 3rem 0 3rem;
+    padding: 0;
+    flex-direction: column;
+    @include lg {
+        flex-direction: row;
+        margin: 0 10rem 0 10rem;
+
+    }
+}
+
+.left-container {
+    flex: 1;
+    width: 100%;
+    text-align: center;
+    @include lg {
+        text-align: left;
+
+    }
+}
+
+.short-line{
+    display: none;
+    @include lg {
+        display: inline;
+
+    }
+
+}
+
+.right-container {
+    flex: 1;
+    height: 100%;
+    display: none;
+    @include lg {
+        display: block;
+
+    }
+}
+
+.brand-text {
+    font-family: $italic-font-family;
+    color: $primary-color;
+    font-size: 3rem;
+    margin-top: 3rem;
+    @include lg {
+        display: block;
+        margin-top: 3.8rem;
+
+    }
+}
+
+.login-button {
+    width: 14rem;
+    height: 2.5rem;
+    border-radius: 1.7rem;
+    background: $primary-color;
+    color: $white-text-color;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    outline: none;
+    cursor: pointer;
+}
+
+.google-img{
+    margin-right: 0.8rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    // to move the image downwards without distorting the text
+    margin-bottom: -0.27rem;
+}
+
+.brand-statement{
+    font-size: 2rem;
+    @include lg {
+        font-size: 3rem;
+        margin-top: 2rem;
+        font-family: roboto;
+    }
+}
+
+.line hr {
+    margin-top: 2.5rem;
+    width: 4rem;
+    border: none;
+    height: 0.2rem;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+
+}
+
+.welcome {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+}
+
+.line-word{
+    display: inline-flex;
+    margin-top: 0rem;
+    @include lg {
+        margin-top: 2rem;
+    }
+}
+
+.background-box {
+    position: relative;
+    color: black;
+    width: 29rem;
+    height: 20rem;
+    background: rgba(196, 196, 196, 0.13);
+    margin-top: 15rem;
+    margin-left: 8rem;
+}
+
+
+
+
+.top-menu-position {
+    left: 28%;
+    right: 0%;
+    bottom: 55.59%;
+}
+
+.left-menu-position {
+    right: 56%;
+    top: 55.59%;
+}
+
+
+.right-menu-position {
+    left: 56%;
+    top: 55.59%;
+}
+
+.top-dots{
+    position: absolute;
+    left: 23%;
+    bottom: 78%;
+}
+
+.bottom-dots {
+    position: absolute;
+    left: 63%;
+    top: 78%;
+}

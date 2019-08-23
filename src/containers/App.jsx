@@ -1,12 +1,16 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
+import PropTypes from 'prop-types';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { LoginPage } from './login/login-page'
 import './app.scss';
-class App extends Component {
-    render() {
-        return (
-          <div>
-            <h2 className='first-note'>Welcome to Ship-it</h2>
-          </div>
-        );
-    }
-}
-export default App;
+
+const Router = ({ user }) => (
+  <BrowserRouter>
+    <Switch>
+      <Route exact path='/' render={props => <LoginPage />} />
+    </Switch>
+  </BrowserRouter>
+
+);
+
+export default Router;
