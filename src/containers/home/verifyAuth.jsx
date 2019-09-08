@@ -1,4 +1,4 @@
-import React, { Component, Fragment, useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -11,7 +11,7 @@ import * as actions from '../../actions/authactions/social-auth';
  * @function VerifyAuth
  * @param {object} - props. the props passed into the component
  */
-const VerifyAuth = (props) => {
+const VerifyAuth = props => {
 
   useEffect(() => {
     const { history: { location: { search, pathname } } } = props;

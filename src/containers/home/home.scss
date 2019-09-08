@@ -1,9 +1,9 @@
 @import '../../assets/scss/viariables';
 @import '../../assets/scss/mixins';
+@import '../../assets/scss/normalize';
 
 body{
     background: #E5E5E5;
-    font-family: roboto;
 }
 
 .main-container {
@@ -53,9 +53,10 @@ body{
     color: $primary-color;
     font-size: 3rem;
     margin-top: 3rem;
+    margin-bottom: 3rem;
     @include lg {
         display: block;
-        margin-top: 3.8rem;
+        margin-top: 6.3rem;
 
     }
 }
@@ -70,6 +71,7 @@ body{
     margin-top: 2rem;
     outline: none;
     cursor: pointer;
+    border: none;
 }
 .login-button:hover{
     background: #c98704;
@@ -85,15 +87,16 @@ body{
 
 .brand-statement{
     font-size: 2rem;
+    line-height: 3.5rem;
     @include lg {
         font-size: 3rem;
         margin-top: 2rem;
-        font-family: roboto;
+        margin-bottom: 4rem;
     }
 }
 
 .line hr {
-    margin-top: 2.5rem;
+    margin-top: 0.8rem;
     width: 4rem;
     border: none;
     height: 0.2rem;
