@@ -1,0 +1,49 @@
+@import '../../../assets/scss/viariables';
+@import '../../../assets/scss/mixins';
+@import '../../../assets/scss/normalize';
+
+.header-bars{
+    display: block;
+    margin: 1.0rem 0.8rem 0px 1rem;
+
+    @include lg {
+        display: none;
+    } 
+}
+
+.bar {
+    width: 20px;
+    height: 4px;
+    background-color: $white-text-color;
+    margin: 4px 0;
+}
+
+.right-header{
+    background: $primary-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+    @include lg {
+        background: $background-color;
+    } 
+}
+
+
+.header-title{
+    color: $white-text-color;
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+    @include lg {
+        color: $black-color;
+    } 
+}
+.header-title h3{
+    color: $white-text-color;
+    padding: 0.8rem 0px 0px 0px;
+    margin: 0;
+    @include lg {
+        color: $black-color;
+        padding: 0;
+    } 
+}

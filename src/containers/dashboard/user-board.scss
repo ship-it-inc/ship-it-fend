@@ -1,0 +1,76 @@
+@import '../../assets/scss/viariables';
+@import '../../assets/scss/mixins';
+@import '../../assets/scss/normalize';
+
+.container{
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @include lg {
+        height: 100%;
+        display: flex;
+        margin: 0;
+        padding: 0;
+    } 
+}
+
+
+
+.dash-right-container{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    @include lg {
+        padding: 1.7rem 0.8rem 0rem 3.4rem;
+        width: 100%;
+        flex: 3;
+    } 
+}
+
+
+.subscribe-btn{
+    background: $primary-color;
+    display: block;
+    width: 92%;
+    margin: auto;
+    height: 2.7rem;
+    color: $white-text-color;
+    border-radius: 0.25rem;
+    margin-top: 1.4rem;
+    font-size: 1.4rem;
+    @include lg {
+        display: none;
+    }
+}
+
+.transaction-box-area{
+    display: block;
+    @include lg {
+        display: flex;
+        flex-direction: row;
+    }
+}
+.plus-circle{
+    color: $secondary-color;
+    padding-bottom: 1.5rem;
+}
+
+.plus-container{
+    display: none;
+    margin-bottom: 4rem;
+
+    @include lg {
+        display: flex;
+        flex-direction: column;
+        margin-left: 3rem;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+// .plus-container{
+//     margin-left: 4rem;
+// }

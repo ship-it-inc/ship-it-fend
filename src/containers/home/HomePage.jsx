@@ -16,8 +16,8 @@ import * as actions from '../../actions/authactions/social-auth';
 
 
 const handleClick = () => {
-  window.location.href = 'https://ship-it-staging.herokuapp.com/api/v1/auth/google';
-  // window.location.href = 'http://localhost:3000/api/v1/auth/google';
+  // window.location.href = 'https://ship-it-staging.herokuapp.com/api/v1/auth/google';
+  window.location.href = 'http://localhost:3000/api/v1/auth/google';
 }
 
 /**
@@ -31,7 +31,7 @@ useEffect(() => {
   if (props['user']) {
     props.history.push('/dashboard')
   }
-})
+}, [])
 
 useEffect(() => {
   if(props.error){
@@ -47,7 +47,7 @@ useEffect(() => {
           <div className="line"><hr/></div><p className="welcome">welcome</p>
         </div>
         <h1 className="brand-statement">Let us take care of food delivery for you while you focus on your work.</h1>
-        <p><span className="short-line">-</span>Login to the platform</p>
+        <p><span className="short-line">-</span> Login to the platform</p>
         <p><span className="short-line">-</span> Place your order</p>
         <p><span className="short-line">-</span> Wait for delivery</p>
         <Button onClick={ () => handleClick() } type="submit" classes="login-button"><img className="google-img" alt="Google" src={ googleImage } />Sign in with Google</Button>
