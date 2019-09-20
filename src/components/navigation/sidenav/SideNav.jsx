@@ -6,10 +6,10 @@ import './side-nav.scss';
  * @description - component to load the sidenav
  * @function SideNav
  */
-export const SideNav = () => {
+export const SideNav = props => {
 
   return(
-    <div className="dash-left-container">
+    <div className={props.containerName}>
         <h1 className="brand-name">
             Ship-it
         </h1>

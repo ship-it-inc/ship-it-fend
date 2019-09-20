@@ -16,6 +16,19 @@
     } 
 }
 
+.small-container{
+    justify-content: center;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    @include lg {
+        height: 100%;
+        display: block;
+        margin: 0;
+        padding: 0;
+    } 
+}
 
 
 .dash-right-container{

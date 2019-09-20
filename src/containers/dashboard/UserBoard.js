@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
@@ -20,12 +20,23 @@ export const UserBoard = props => {
   useEffect(() => {
     props.userOrdersCount();
   }, [])
+  const [clicked, setClicked] = useState(false);
+  const [sideContainer, setSideContainer] = useState("container");
 
+  const OnBarClick = () => {
+    console.log('this is the nave clicked value', clicked)
+    setClicked(!clicked);
+    // setSideContainer("small-container")
+  }
   return(
-    <div className="container">
-        <SideNav/>
+    <div className={sideContainer}>
+      {
+          clicked ? (<SideNav containerName="small-dash-left-container" />) : <SideNav containerName="dash-left-container" />
+      }
+
+{/* <SideNav containerName="dash-left-container" /> */}
         <div className="dash-right-container">
-            <NavBar />
+            <NavBar openSideBar={OnBarClick} />
             <div className="transaction-box-area
             ">
               <OrdersCount name="Orders Count" amount={props.response} transactionType="Orders"></OrdersCount>
