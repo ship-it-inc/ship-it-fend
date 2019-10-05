@@ -43,6 +43,13 @@
     } 
 }
 
+.container-blur{
+    filter: blur(0.1rem)
+}
+
+.container-no-blur{
+    filter: blur(0)
+}
 
 .subscribe-btn{
     background: $primary-color;

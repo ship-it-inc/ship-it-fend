@@ -21,33 +21,31 @@ export const UserBoard = props => {
     props.userOrdersCount();
   }, [])
   const [clicked, setClicked] = useState(false);
-  const [sideContainer, setSideContainer] = useState("container");
 
   const OnBarClick = () => {
-    console.log('this is the nave clicked value', clicked)
-    setClicked(!clicked);
-    // setSideContainer("small-container")
+    setClicked(true);
+  }
+  const onContainerClick = () => {
+    setClicked(false);
   }
   return(
-    <div className={sideContainer}>
+    <div className="container">
       {
           clicked ? (<SideNav containerName="small-dash-left-container" />) : <SideNav containerName="dash-left-container" />
       }
-
-{/* <SideNav containerName="dash-left-container" /> */}
-        <div className="dash-right-container">
-            <NavBar openSideBar={OnBarClick} />
-            <div className="transaction-box-area
-            ">
-              <OrdersCount name="Orders Count" amount={props.response} transactionType="Orders"></OrdersCount>
-              <OrdersCount name="Transactions Count" amount="coming soon" transactionType="Orders"></OrdersCount>
-              <div className="plus-container">
-                <FontAwesomeIcon className='plus-circle' size='3x' icon={faPlusCircle} />
-                <p>Fund your Account</p>
-              </div>
+      <div onClick={clicked ? onContainerClick: null } className={"dash-right-container " + (clicked ? 'container-blur' : null)}>
+          <NavBar clicked={clicked} page="Dashboard" openSideBar={OnBarClick} firstName={props.user.firstName} />
+          <div className="transaction-box-area
+          ">
+            <OrdersCount name="Orders Count" amount={props.response} transactionType="Orders"></OrdersCount>
+            <OrdersCount name="Transactions Count" amount="coming soon" transactionType="Orders"></OrdersCount>
+            <div className="plus-container">
+              <FontAwesomeIcon className='plus-circle' size='3x' icon={faPlusCircle} />
+              <p>Fund your Account</p>
             </div>
-            <button className='subscribe-btn'>Top up</button>
-        </div>
+          </div>
+          <button className='subscribe-btn'>Top up</button>
+      </div>
     </div>
   )
 }

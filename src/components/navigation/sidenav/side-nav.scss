@@ -3,7 +3,15 @@
 @import '../../../assets/scss/normalize';
 
 .dash-left-container{
-    display: none;
+    display: block;
+    width: 0;
+    visibility: hidden;
+    transition: 0.7s;
+    background-color: $primary-color;
+    min-height: 100vh;
+    transition-timing-function: ease-out;
+    margin: 0;
+    padding: 0;
     @include lg {
         display: block;
         min-height: 100vh;
@@ -11,18 +19,25 @@
         background-color: $primary-color;
         margin: 0;
         padding: 0;
+        visibility: visible;
     } 
 }
 
-// .small-dash-left-container{
-//     display: block;
-//     min-height: 100vh;
-//     width: 14rem;
-//     background-color: $primary-color;
-//     margin: 0;
-//     padding: 0;
-//     z-index: 1;
-// }
+.nav-links a{
+    text-decoration: none;
+}
+
+.small-dash-left-container{
+    display: block;
+    min-height: 100vh;
+    -webkit-transition: width 0.7s; /* For Safari 3.1 to 6.0 */
+    transition: 0.7s;
+    width: 14rem;
+    background-color: $primary-color;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
 
 .brand-name{
     color: #FFFFFF;
@@ -35,28 +50,35 @@
 }
 
 .active-nav-field{
+    display: block;
     width: 14rem;
-    height: 1.6rem;
+    height: 2.2rem;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
     background-color: white;
     padding-right: 1rem;
     border-top-right-radius: 50px 50px;
     border-bottom-right-radius: 50px 50px;
-    height: 2.6rem;
 }
 
-
-.active-nav-field a{
-    color: #000000; 
-  }
-
+.active-nav-field p{
+    color: #000000;
+    padding-left: 0;
+}
 
 .nav-title{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
+    display: block;
     text-decoration: none;
     color: white;
-    padding: 0.7rem;
+    padding-top: 0.25rem;
+    margin-left: 4.25rem;
+    margin-top: 0.3rem;
+    transition: 0.3s;
+    transition-timing-function: ease-in-out;
+}
+.nav-links a :hover{
+    color: black;
+}
+
+.nav-title :hover{
+    color: black;
 }

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import './nav-bar.scss';
 import UserBalance from '../../../components/cards/balance/UserBalance';
-import SmallSideNav from '../sidenav/SideNav';
 import * as actions from '../../../actions/nav/userBalance';
 
 
@@ -13,28 +12,23 @@ import * as actions from '../../../actions/nav/userBalance';
  * @param {object} - props. the props passed into the component
  */
 export const NavBar = props => {
-    const [clicked, setClicked] = useState(false);
     useEffect(() => {
-        props.userBalance()
+        props.userBalance();
     }, [])
 
     return (
         <div className="right-header">
-            <div onClick={props.openSideBar} className="header-bars">
+            <div onClick={props.openSideBar} className={"header-bars " + (props.clicked ? "display-off" : null)}>
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>
             </div>
             <div className="header-title" >
-                <h3>Ship it Dashboard</h3>
-                <p>welcome back sulivan</p>
+                <h3>Ship it {props.page}</h3>
+                <p>Welcome back {props.firstName}</p>
+                <h4 className="small-page-name">{props.page}</h4>
             </div>
             <UserBalance balance={props.balanceResponse}></UserBalance>
-            <div>
-            {
-                clicked ? (<SideNav/ >) : null
-            }
-            </div>
         </div>
         
     )

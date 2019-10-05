@@ -6,7 +6,7 @@
     flex-direction: column;
     background: rgba(228, 101, 9, 0.1);
     border-radius: 5px;
-    height: 5.2rem;
+    height: 4.2rem;
     @include lg {
         margin-right: 5rem;
     }
@@ -17,9 +17,12 @@
     font-size: 1.3rem;
     color: $white-text-color;
     @include lg {
-        padding: 0px 40px 0px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2rem 0 2rem;
         margin: 0;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: $dark-primary-color;
     }
 }
@@ -27,11 +30,13 @@
     display: none;
 
     @include lg {
-        display: inline;
-        margin-top: 1rem;
+        display: flex;
+        // margin-top: 1rem;
         justify-content: center;
+        align-items: center;
         margin-left: auto;
         margin-right: auto;
         color: $dark-primary-color;
+        font-size: 0.9rem;
     }
 }
