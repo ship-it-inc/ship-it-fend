@@ -1,11 +1,10 @@
-import React, { useEffect} from 'react';
+import React, { useEffect, useState} from 'react';
 import { connect } from 'react-redux';
-import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import './nav-bar.scss';
 import UserBalance from '../../../components/cards/balance/UserBalance';
-
 import * as actions from '../../../actions/nav/userBalance';
+
 
 /**
  * @description - component to load the NavBar
@@ -14,20 +13,20 @@ import * as actions from '../../../actions/nav/userBalance';
  */
 export const NavBar = props => {
     useEffect(() => {
-        console.log(props)
-        props.userBalance()
+        props.userBalance();
     }, [])
 
     return (
         <div className="right-header">
-            <div className="header-bars">
+            <div onClick={props.openSideBar} className={"header-bars " + (props.clicked ? "display-off" : null)}>
                 <div className="bar"></div>
                 <div className="bar"></div>
                 <div className="bar"></div>
             </div>
             <div className="header-title" >
-                <h3>Ship it Dashboard</h3>
-                <p>welcome back sulivan</p>
+                <h3>Ship it {props.page}</h3>
+                <p>Welcome back {props.firstName}</p>
+                <h4 className="small-page-name">{props.page}</h4>
             </div>
             <UserBalance balance={props.balanceResponse}></UserBalance>
         </div>
@@ -43,12 +42,6 @@ export const mapStateToProps = state => (
   
   export const mapDispatchToProps = dispatch => bindActionCreators(actions,
     dispatch);
-
-// export const mapDispatchToProps = (dispatch) => ({
-//   action:{
-//     userBalance: bindActionCreators( userBalance, dispatch)
-//   }
-// })
   
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
 

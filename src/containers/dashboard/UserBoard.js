@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
@@ -20,23 +20,32 @@ export const UserBoard = props => {
   useEffect(() => {
     props.userOrdersCount();
   }, [])
+  const [clicked, setClicked] = useState(false);
 
+  const OnBarClick = () => {
+    setClicked(true);
+  }
+  const onContainerClick = () => {
+    setClicked(false);
+  }
   return(
     <div className="container">
-        <SideNav/>
-        <div className="dash-right-container">
-            <NavBar />
-            <div className="transaction-box-area
-            ">
-              <OrdersCount name="Orders Count" amount={props.response} transactionType="Orders"></OrdersCount>
-              <OrdersCount name="Transactions Count" amount="coming soon" transactionType="Orders"></OrdersCount>
-              <div className="plus-container">
-                <FontAwesomeIcon className='plus-circle' size='3x' icon={faPlusCircle} />
-                <p>Fund your Account</p>
-              </div>
+      {
+          clicked ? (<SideNav containerName="small-dash-left-container" />) : <SideNav containerName="dash-left-container" />
+      }
+      <div onClick={clicked ? onContainerClick: null } className={"dash-right-container " + (clicked ? 'container-blur' : null)}>
+          <NavBar clicked={clicked} page="Dashboard" openSideBar={OnBarClick} firstName={props.user.firstName} />
+          <div className="transaction-box-area
+          ">
+            <OrdersCount name="Orders Count" amount={props.response} transactionType="Orders"></OrdersCount>
+            <OrdersCount name="Transactions Count" amount="coming soon" transactionType="Orders"></OrdersCount>
+            <div className="plus-container">
+              <FontAwesomeIcon className='plus-circle' size='3x' icon={faPlusCircle} />
+              <p>Fund your Account</p>
             </div>
-            <button className='subscribe-btn'>Top up</button>
-        </div>
+          </div>
+          <button className='subscribe-btn'>Top up</button>
+      </div>
     </div>
   )
 }

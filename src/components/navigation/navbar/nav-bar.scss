@@ -17,6 +17,19 @@
     background-color: $white-text-color;
     margin: 4px 0;
 }
+.display-off{
+    display: none;
+}
+.small-page-name{
+    display: block; 
+    padding: 0.8rem 0 0 0;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    @include lg {
+        display: none;
+    } 
+}
 
 .right-header{
     background: $primary-color;
@@ -39,11 +52,33 @@
     } 
 }
 .header-title h3{
+    display: none;
     color: $white-text-color;
-    padding: 0.8rem 0px 0px 0px;
+    padding: 0.8rem 0 0 0;
     margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
     @include lg {
-        color: $black-color;
+        display: block;
+        color: $text-color;
+        padding: 0;
+    } 
+}
+
+.header-title p{
+    display: none;
+    color: $white-text-color;
+    padding: 0.8rem 0 0 0;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 0.95rem;
+    line-height: 1rem;
+    @include lg {
+        display: block;
+        color: $text-color;
         padding: 0;
     } 
 }

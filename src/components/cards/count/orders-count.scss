@@ -26,8 +26,9 @@
 
 .transaction-box h3 {
     color: #444444;
-} 
-.transaction-box h3 {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.8rem;
     padding-top: 1.2rem;
     @include lg {
         padding-top: 0.6rem;
@@ -55,8 +56,17 @@
 
     }
 }
+.count-card-lower p {
+    color: #444444;
+    font-style: normal;
+    font-weight: normal;
+} 
 
 
 .user-count-h3{
     margin-bottom: 1rem;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1.8rem;
+    color: #444444;
 }

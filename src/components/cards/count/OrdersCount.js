@@ -15,11 +15,8 @@ const OrdersCount = props => {
             <h3 className="user-count-h3">{props.amount}</h3>
             <div className="count-bottom-line"></div>
             <div className="count-card-lower">
-              <img className="arrow-right" src={arrowRight} />
               <p>successful {props.transactionType}</p>
-            </div>
-
-            
+            </div>            
         </div>
   )
 }
