@@ -16,7 +16,7 @@ export const authFail = error => ({
 
 export
 const socialAuth = (socialToken) => async (dispatch) => {
-  const callbackUrl = 'http://localhost:3000/api/v1/auth/google/callback';
+  const callbackUrl = process.env.GOOGLE_CALLBACK_URL;
   const url = `${callbackUrl}${socialToken}`;
   try {
     const response = await axios.get(url);

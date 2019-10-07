@@ -21,7 +21,7 @@ export const userBalanceFail = error => ({
 export const userBalance = () => async (dispatch) => {
   dispatch(userBalanceStart());
   const token = localStorage.getItem('token');
-  const url = 'http://localhost:3000/api/v1/balance';
+  const url =`${process.env.SERVER_API}/balance`;
   try {
     const response = await axios.get(url, {
         headers: {

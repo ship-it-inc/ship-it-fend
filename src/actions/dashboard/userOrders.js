@@ -21,7 +21,7 @@ export const ordersCountFail = error => ({
 export const userOrdersCount = () => async (dispatch) => {
   dispatch(orderCountStart());
   const token = localStorage.getItem('token');
-  const url = 'http://localhost:3000/api/v1/orders-count';
+  const url = `${process.env.SERVER_API}/orders-count`;
   try {
     const response = await axios.get(url, {
         headers: {
