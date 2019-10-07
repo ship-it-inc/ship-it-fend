@@ -17,7 +17,7 @@ import * as actions from '../../actions/authactions/social-auth';
 
 const handleClick = () => {
   // window.location.href = 'https://ship-it-staging.herokuapp.com/api/v1/auth/google';
-  window.location.href = 'http://localhost:3000/api/v1/auth/google';
+  window.location.href = `${process.env.SERVER_API}/auth/google`;
 }
 
 /**
@@ -28,6 +28,7 @@ const handleClick = () => {
 const HomePage = (props) => {
 
 useEffect(() => {
+  
   if (props['user']) {
     props.history.push('/dashboard')
   }
