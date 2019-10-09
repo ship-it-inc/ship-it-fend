@@ -12,7 +12,6 @@ const envKeys = Object.keys(env).reduce((prev, next) => {
   prev[`process.env.${next}`] = JSON.stringify(env[next]);
   return prev;
 }, {});
-console.log('this is the env that is sent to the user', process.env);
 module.exports = merge(common, {
   mode: 'development',
   devtool: 'inline-source-map',

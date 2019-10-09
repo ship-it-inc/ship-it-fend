@@ -56,6 +56,11 @@ body{
     margin-bottom: 3rem;
     @include lg {
         display: block;
+        margin-top: 5.3rem;
+
+    }
+    @include xl {
+        display: block;
         margin-top: 6.3rem;
 
     }
@@ -89,9 +94,15 @@ body{
     font-size: 2rem;
     line-height: 3.5rem;
     @include lg {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+        line-height: 2.5rem;
+    }
+    @include xl {
         font-size: 3rem;
         margin-top: 2rem;
         margin-bottom: 4rem;
+        line-height: 3.5rem;
     }
 }
 
@@ -130,33 +141,60 @@ body{
 }
 
 
-
-
 .top-menu-position {
     left: 28%;
     right: 0%;
     bottom: 55.59%;
+    @include lg {
+        left: 28%;
+        right: 0%;
+        bottom: 74.59%;
+    }
+    @include xl {
+        left: 28%;
+        right: 0%;
+        bottom: 55.59%;
+    }
 }
 
 .left-menu-position {
-    right: 56%;
-    top: 55.59%;
+    @include lg {
+        right: 56%;
+        top: 33.59%;
+    }
+    @include xl {
+        right: 56%;
+        top: 55.59%;
+    }
 }
 
 
 .right-menu-position {
-    left: 56%;
-    top: 55.59%;
+
+    @include lg {
+        left: 56%;
+        top: 33.59%;
+    }
+    @include xl {
+        left: 56%;
+        top: 55.59%;
+    }
 }
 
 .top-dots{
     position: absolute;
     left: 23%;
-    bottom: 78%;
+    bottom: 90%;
+    @include xl {
+        bottom: 78%;
+    }
 }
 
 .bottom-dots {
     position: absolute;
     left: 63%;
-    top: 78%;
+    top: 49%;
+    @include xl {
+        bottom: 78%;
+    }
 }
