@@ -53,6 +53,7 @@ module.exports = merge(common, {
       'process.env.GOOGLE_URL':JSON.stringify('https://ship-it-staging.herokuapp.com/api/v1/auth/google'),
       'process.env.BASE_URL': JSON.stringify('https://ship-it-staging.herokuapp.com/api/v1/auth/'),
       'process.env.FRONTEND_API': JSON.stringify('https://ship-it.herokuapp.com'),
+      'process.env.GOOGLE_CALLBACK_URL': JSON.stringify('https://ship-it-staging.herokuapp.com/api/v1/auth/google/callback'),
     }),
   ],
 });
