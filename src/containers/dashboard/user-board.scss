@@ -2,7 +2,7 @@
 @import '../../assets/scss/mixins';
 @import '../../assets/scss/normalize';
 
-.container{
+.container-ship-it{
     justify-content: center;
     display: flex;
     width: 100%;
@@ -76,6 +76,7 @@
 .plus-circle{
     color: $secondary-color;
     padding-bottom: 1.5rem;
+    cursor: pointer;
 }
 
 .plus-container{
@@ -91,6 +92,3 @@
     }
 }
 
-// .plus-container{
-//     margin-left: 4rem;
-// }
