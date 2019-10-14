@@ -50,7 +50,7 @@ useEffect(() => {
         <p><span className="short-line">-</span> Login to the platform</p>
         <p><span className="short-line">-</span> Place your order</p>
         <p><span className="short-line">-</span> Wait for delivery</p>
-        <Button onClick={ () => handleClick() } type="submit" classes="login-button"><img className="google-img" alt="Google" src={ googleImage } />Sign in with Google</Button>
+        <Button onClick={ handleClick } type="submit" classes="login-button"><img className="google-img" alt="Google" src={ googleImage } />Sign in with Google</Button>
       </div>
       <div className="right-container">
         <div className="background-box">

@@ -56,8 +56,8 @@ body{
     margin-bottom: 3rem;
     @include lg {
         display: block;
-        margin-top: 5.3rem;
-
+        margin-top: 3.3rem;
+        margin-bottom: 1rem;
     }
     @include xl {
         display: block;
@@ -73,7 +73,7 @@ body{
     background: $primary-color;
     color: $white-text-color;
     font-size: 0.9rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     outline: none;
     cursor: pointer;
     border: none;
@@ -126,7 +126,8 @@ body{
     display: inline-flex;
     margin-top: 0rem;
     @include lg {
-        margin-top: 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
     }
 }
 
